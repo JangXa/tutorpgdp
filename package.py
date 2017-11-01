@@ -7,7 +7,7 @@ for root, dirs, files in os.walk(os.path.dirname(os.path.abspath(__file__))):
             file = open(path , "r")
             lines = file.readlines()
             file.close()
-            file = open(name, "w")
+            file = open(path,name "w")
             
             i = 0 
             for line in lines:
