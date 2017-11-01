@@ -2,8 +2,9 @@ import os
 import sys
 for root, dirs, files in os.walk(os.path.dirname(os.path.abspath(__file__))):
     for name in files:
+        path = os.path.join(root, name)
         if name.endswith((".java")):
-            file = open(name, "r")
+            file = open(path , "r")
             lines = file.readlines()
             file.close()
             file = open(name, "w")
