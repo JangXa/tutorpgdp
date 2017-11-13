@@ -5,9 +5,14 @@ for root, dirs, files in os.walk(os.path.dirname(os.path.abspath(__file__))):
         path = os.path.join(root, name)
         if name.endswith((".java")):
             file = open(path , "r")
-            lines = file.readlines()
+            #print(name)
+            try:
+                lines = file.readlines()
+            except:
+                print(name + " " + path)
+                continue
             file.close()
-            file = open(path,name "w")
+            file = open(path, "w")
             
             i = 0 
             for line in lines:
